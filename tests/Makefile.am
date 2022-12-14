@@ -1,3 +1,6 @@
+LOG_DRIVER = env AM_TAP_AWK='$(AWK)' $(SHELL) \
+    ./my-test-driver
+
 TESTS = check-00-test check-01-add
 
 check_PROGRAMS = \
