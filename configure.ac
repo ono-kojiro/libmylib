@@ -20,9 +20,12 @@ LT_INIT
 AC_PROG_CC
 
 AC_PROG_AWK
+AC_PROG_CPP
+AC_PROG_CXX
+AC_PROG_RANLIB
 
 # Checks for libraries.
-PKG_CHECK_MODULES([check],
+PKG_CHECK_MODULES([CHECK],
   [check],
   [
       #AC_MSG_NOTICE([found check])
