@@ -4,6 +4,7 @@
 int mylib(void);
 
 int mylib_add(int a, int b);
+int mylib_sub(int a, int b);
 
 #endif /* #ifndef MYLIB_H */
 
