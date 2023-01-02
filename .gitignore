@@ -75,4 +75,5 @@ dest/
 *.deb
 
 mkpackage.sh
+*~
 

@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([libmylib], [0.0.1], [ono.kojiro@gmail.com])
+AC_INIT([libmylib],[0.0.1],[ono.kojiro@gmail.com])
 AC_CONFIG_MACRO_DIR([config])
 AC_CONFIG_AUX_DIR([config])
 AC_CONFIG_SRCDIR([src/mylib.c])
@@ -10,7 +10,7 @@ AC_CONFIG_HEADERS([config/config.h])
 
 AC_REQUIRE_AUX_FILE([tap-driver.sh])
 
-AC_CANONICAL_SYSTEM
+AC_CANONICAL_TARGET
 
 AM_INIT_AUTOMAKE([foreign subdir-objects])
 
@@ -22,7 +22,6 @@ AC_PROG_CC
 AC_PROG_AWK
 AC_PROG_CPP
 AC_PROG_CXX
-AC_PROG_RANLIB
 
 # Checks for libraries.
 PKG_CHECK_MODULES([CHECK],
@@ -38,7 +37,7 @@ PKG_CHECK_MODULES([CHECK],
 )
 
 AC_ARG_ENABLE([check],
-  [AC_HELP_STRING([--enable-check], [ use libcheck for unit test])],
+  [AS_HELP_STRING([--enable-check],[ use libcheck for unit test])],
   [
     case "${enableval}" in
 	  yes)
